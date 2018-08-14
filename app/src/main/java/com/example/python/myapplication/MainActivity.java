@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -21,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
     public void btnClicked(View view){
        TextView txt = (TextView)findViewById(R.id.txtHello);
        Button btn = (Button)findViewById(R.id.btnHello);
-       txt.setText("This Text!");
+       txt.setText("I was changed when Button Pressed");
        btn.setText("Clicked!");
+       Toast.makeText(this, "Button Clicked", Toast.LENGTH_SHORT).show();
     }
 }
